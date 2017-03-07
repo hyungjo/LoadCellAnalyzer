@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="330.0" prefWidth="400.0" style="-fx-background-color: white;" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.loadcell.view.SettingLayoutController">
+   <children>
+      <GridPane layoutX="41.0" layoutY="145.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="87.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="77.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="197.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="bridgeSelectChkBox0" mnemonicParsing="false" text="Bridge 0" GridPane.columnIndex="1" />
+            <CheckBox fx:id="bridgeSelectChkBox1" mnemonicParsing="false" text="Bridge 1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="bridgeSelectChkBox2" mnemonicParsing="false" text="Bridge 2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox fx:id="bridgeSelectChkBox3" mnemonicParsing="false" text="Bridge 3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Bridge Select" />
+            <Label text="Data Rate" GridPane.rowIndex="4" />
+            <Label text="Gain Value" GridPane.rowIndex="5" />
+            <Label text="Hz (Default: 40, data / 1 sec)" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label text="Value (Default: 128)" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label text="Filtering" GridPane.rowIndex="6" />
+            <Label text="MA Size (Default: 20)" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="movingAverageField" text="20" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="dataRateField" text="40" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="gainField" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Label layoutX="38.0" layoutY="22.0" text="Load Cell Setting" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="86.0" layoutY="350.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#handleCancel" styleClass="default" text="Cancel" />
+            <Button mnemonicParsing="false" onAction="#handleOk" styleClass="primary" text="OK" />
+        </buttons>
+      </ButtonBar>
+      <Separator layoutX="8.0" layoutY="37.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0" />
+      <Separator layoutX="-5.0" layoutY="354.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+   </children>
+</AnchorPane>
